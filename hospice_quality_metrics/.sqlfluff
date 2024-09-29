@@ -1,0 +1,7 @@
+[sqlfluff]
+dialect = duckdb  # or the dialect you use, e.g., 'postgres'
+templater = dbt
+exclude_rules = AM04, LT05, RF05 
+
+[sqlfluff:templater:dbt]
+project_dir = .  # Path to your dbt project
