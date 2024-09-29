@@ -1,0 +1,10 @@
+repos:
+  - repo: https://github.com/sqlfluff/sqlfluff
+    rev: "3.2.0"  # Use the latest stable version
+    hooks:
+      - id: sqlfluff-lint
+        args: ["--dialect", "duckdb", "--templater", "jinja"]
+        files: \.sql$  # Use proper regex to match SQL files
+      - id: sqlfluff-fix
+        args: ["--dialect", "duckdb", "--templater", "jinja"]
+        files: \.sql$  # Match your SQL files
