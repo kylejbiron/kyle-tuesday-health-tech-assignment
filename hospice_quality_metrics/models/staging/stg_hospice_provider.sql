@@ -1,26 +1,26 @@
 -- models/stg_hospice_provider
 
-WITH raw_data AS (
-    SELECT *
-    FROM read_csv_auto('{{ var("raw_dir") }}/Hospice_Provider_Aug2024.csv')
+with raw_data as (
+    select *
+    from read_csv_auto('{{ var("raw_dir") }}/Hospice_Provider_Aug2024.csv')
 )
 
-SELECT
-    "CMS Certification Number (CCN)" AS ccn,
-    "Facility Name" AS facility_name,
-    "Address Line 1" AS address_line_1,
-    "Address Line 2" AS address_line_2,
-    "City/Town" AS city_town,
+select
+    "CMS Certification Number (CCN)" as ccn,
+    "Facility Name" as facility_name,
+    "Address Line 1" as address_line_1,
+    "Address Line 2" as address_line_2,
+    "City/Town" as city_town,
     state,
-    "ZIP Code" AS zip_code,
-    "County/Parish" AS county_parish,
-    "Telephone Number" AS telephone_number,
-    "CMS Region" AS cms_region,
-    "Measure Code" AS measure_code,
-    cast("Measure Name" AS VARCHAR(255)) AS measure_name,
+    "ZIP Code" as zip_code,
+    "County/Parish" as county_parish,
+    "Telephone Number" as telephone_number,
+    "CMS Region" as cms_region,
+    "Measure Code" as measure_code,
+    cast("Measure Name" as varchar(255)) as measure_name,
     score,
     footnote,
-    "Measure Date Range" AS measure_date_range,
-    split_part("Measure Date Range", '-', 1) AS measure_from_date,
-    split_part("Measure Date Range", '-', 2) AS measure_end_date
-FROM raw_data
+    "Measure Date Range" as measure_date_range,
+    split_part("Measure Date Range", '-', 1) as measure_from_date,
+    split_part("Measure Date Range", '-', 2) as measure_end_date
+from raw_data
