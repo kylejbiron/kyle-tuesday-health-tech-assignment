@@ -17,7 +17,7 @@ SELECT
     "Telephone Number" AS telephone_number,
     "CMS Region" AS cms_region,
     "Measure Code" AS measure_code,
-    "Measure Name" AS measure_name,
+    cast("Measure Name" AS VARCHAR(255)) AS measure_name,
     score,
     footnote,
     "Measure Date Range" AS measure_date_range,
