@@ -40,8 +40,12 @@ select
 
     hci.ccn,
     hci.cms_region,
-    his.score as h_008_01_observed_score,
-    hci.score as h_012_00_observed_score,
+
+    --convert to decimal for downstream analysis
+    cast(his.score as decimal(5, 1)) as h_008_01_observed_score,
+    cast(hci.score as decimal(3, 1)) as h_012_00_observed_score,
+
+    --footnote was brought into this fact table in case we needed to filter on it 
     his.footnote as h_008_01_observed_footnote,
     hci.footnote as h_012_00_observed_footnote
 
@@ -49,6 +53,3 @@ select
 from get_hci_overall_score as hci
 inner join get_his_composite_measure as his
     on hci.ccn = his.ccn
-
---note: 
---footnote was brought into this fact table in case we needed to filter on it 
