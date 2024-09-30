@@ -1,3 +1,4 @@
 venv/
-kyle-tuesday-health-tech-assignment/hospice_quality_metrics/raw/
-kyle-tuesday-health-tech-assignment/hospice_quality_metrics/db/
+hospice_quality_metrics/venv/
+hospice_quality_metrics/raw/
+hospice_quality_metrics/db/
