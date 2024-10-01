@@ -1,55 +1,73 @@
 -- models/analytics/fact_hospice_provider_flattened.sql
 
-with get_his_composite_measure as (
-
-    select
-        ccn,
-        cms_region,
-        measure_code,
-        score,
-        footnote
-    from {{ ref('stg_hospice_provider') }}
-
-    -- H_008_01_ OBSERVED: Facility observed rate | Hospice and Palliative Care Composite Process Measure
-    where measure_code = 'H_008_01_OBSERVED'
-
-    --filter out records where score is not available
-    and score != 'Not Available'
-
-),
-
-get_hci_overall_score as (
-
-    select
-        ccn,
-        cms_region,
-        measure_code,
-        score,
-        footnote
-    from {{ ref('stg_hospice_provider') }}
-
-    -- H_012_00_OBSERVED: Facility observed rate | Hospice Care Index Overall Score
-    where measure_code = 'H_012_00_OBSERVED'
-
-    --filter out records where score is not available
-    and score != 'Not Available'
-
-)
-
 select
-
-    hci.ccn,
-    hci.cms_region,
-
-    --convert to decimal for downstream analysis
-    cast(his.score as decimal(5, 1)) as h_008_01_observed_score,
-    cast(hci.score as decimal(5, 1)) as h_012_00_observed_score,
-
-    --footnote was brought into this fact table in case we needed to filter on it 
-    his.footnote as h_008_01_observed_footnote,
-    hci.footnote as h_012_00_observed_footnote
-
-    -- HCI contains a larger set of CCNs
-from get_hci_overall_score as hci
-inner join get_his_composite_measure as his
-    on hci.ccn = his.ccn
+    ccn,
+    cms_region,
+    h_001_01_denominator,
+    h_001_01_observed,
+    h_002_01_denominator,
+    h_002_01_observed,
+    h_003_01_denominator,
+    h_003_01_observed,
+    h_004_01_denominator,
+    h_004_01_observed,
+    h_005_01_denominator,
+    h_005_01_observed,
+    h_006_01_denominator,
+    h_006_01_observed,
+    h_007_01_denominator,
+    h_007_01_observed,
+    h_008_01_denominator,
+    cast(h_008_01_observed as decimal(5, 1)) as h_008_01_observed,
+    h_011_01_denominator,
+    h_011_01_observed,
+    cast(h_012_00_observed as decimal(5, 1)) as h_012_00_observed,
+    h_012_01_denominator,
+    h_012_01_observed,
+    h_012_01_percentile,
+    h_012_02_denominator,
+    h_012_02_observed,
+    h_012_02_percentile,
+    h_012_03_denominator,
+    h_012_03_observed,
+    h_012_03_percentile,
+    h_012_04_denominator,
+    h_012_04_observed,
+    h_012_04_percentile,
+    h_012_05_denominator,
+    h_012_05_observed,
+    h_012_05_percentile,
+    h_012_06_denominator,
+    h_012_06_observed,
+    h_012_06_percentile,
+    h_012_07_denominator,
+    h_012_07_observed,
+    h_012_07_percentile,
+    h_012_08_denominator,
+    h_012_08_observed,
+    h_012_08_percentile,
+    h_012_09_denominator,
+    h_012_09_observed,
+    h_012_09_percentile,
+    h_012_10_denominator,
+    h_012_10_observed,
+    h_012_10_percentile,
+    average_daily_census,
+    bene_dual_pct,
+    bene_ma_pct,
+    care_provided_assisted_living,
+    care_provided_home,
+    care_provided_inpatient_hospice,
+    care_provided_inpatient_hospital,
+    care_provided_nursing_facility,
+    care_provided_skilled_nursing,
+    care_provided_other_locations,
+    pct_pts_w_cancer,
+    pct_pts_w_circ_heart_disease,
+    pct_pts_w_dementia,
+    pct_pts_w_resp_disease,
+    pct_pts_w_stroke,
+    pct_pts_w_other_conditions,
+    provided_home_care_and_other,
+    provided_home_care_only
+from {{ ref('stg_hospice_provider_flattened') }}

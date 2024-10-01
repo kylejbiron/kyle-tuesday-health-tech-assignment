@@ -1,0 +1,23 @@
+version: 2
+
+models:
+  - name: stg_hospice_provider
+    description: "Staging the raw CSV of Hospice_Provider_Aug2024.csv"
+    columns:
+      - name: ccn
+        tests:
+          - not_null
+      - name: measure_code
+        tests:
+          - not_null
+    tests:
+      - dbt_utils.unique_combination_of_columns:
+          combination_of_columns: ['ccn', 'measure_code']
+
+  - name: stg_hospice_provider_flattened
+    description: "Flattened version of stg_hospice_provider"
+    columns:
+      - name: ccn
+        tests:
+          - not_null
+          - unique

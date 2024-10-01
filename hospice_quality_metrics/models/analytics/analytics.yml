@@ -1,22 +1,8 @@
 version: 2
 
 models:
-  - name: fact_hospice_provider_missing_metrics
-    description: "Summary of missing metrics by region"
-    columns:
-      - name: cms_region
-        tests:
-          - not_null
-          - unique
-      - name: ccns_missing_his
-        tests:
-          - not_null
-      - name: total_ccn_count
-        tests:
-          - not_null
-
   - name: fact_hospice_provider_flattened
-    description: "Summary of HIS and HCI metrics by CCN"
+    description: "Flattened metrics by CCN"
     columns:
       - name: ccn
         tests:
@@ -25,9 +11,12 @@ models:
       - name: cms_region
         tests:
           - not_null
-      - name: h_008_01_observed_score
+
+  - name: fact_hospice_provider_missing_metrics_by_region
+    description: "Summary of missing metrics by region"
+    columns:
+      - name: cms_region
         tests:
           - not_null
-      - name: h_012_00_observed_score
-        tests:
-          - not_null
+          - unique
+
