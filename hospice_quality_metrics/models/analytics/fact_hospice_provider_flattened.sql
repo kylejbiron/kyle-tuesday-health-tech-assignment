@@ -43,7 +43,7 @@ select
 
     --convert to decimal for downstream analysis
     cast(his.score as decimal(5, 1)) as h_008_01_observed_score,
-    cast(hci.score as decimal(3, 1)) as h_012_00_observed_score,
+    cast(hci.score as decimal(5, 1)) as h_012_00_observed_score,
 
     --footnote was brought into this fact table in case we needed to filter on it 
     his.footnote as h_008_01_observed_footnote,
