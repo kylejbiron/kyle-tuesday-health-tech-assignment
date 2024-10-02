@@ -7,11 +7,10 @@ LinkedIn: [linkedin.com/in/kylebiron](https://www.linkedin.com/in/kylebiron/)
 * [Current Measures | CMS](https://www.cms.gov/medicare/quality/hospice/current-measures)
 * [HIS Manual](https://www.cms.gov/files/document/hismanualv302apr152024.pdf)
 * [Hospice Care Index Technical Report](https://www.cms.gov/files/document/hospice-care-index-hci-technical-reportjuly-2022.pdf)
-* Optional read: [Analysis Journal](https://docs.google.com/document/d/1SECftKCQdrU6C_VH_hN-ZWl7HQkYOIakkvui1QyOsz0/edit#heading=h.xwpvjeusiqjw) - to view project progress 
 
 ## Prompt
 
-This is the hospice quality metrics dataset that CMS publishes annually.  We’d like you to use this dataset to answer a few questions:
+This is the [hospice quality metrics dataset](https://data.cms.gov/provider-data/dataset/252m-zfp9#data-table) that CMS publishes annually.  We’d like you to use this dataset to answer a few questions:
 
 1. How correlated is the HIS composite process metric and the HCI decile?  Based on the HIS process metric distribution, what do you think the pros and cons are of this quality measure?
 > Response: see [hospice_analysis.ipynb](hospice_quality_metrics/notebooks/hospice_analysis.ipynb)
@@ -22,6 +21,8 @@ This is the hospice quality metrics dataset that CMS publishes annually.  We’d
 > - [fact_hospice_provider_flattened](https://github.com/kylejbiron/kyle-tuesday-health-tech-assignment/blob/main/hospice_quality_metrics/models/analytics/analytics.yml#L4)
 > - [dim_hospice_provider_geography](https://github.com/kylejbiron/kyle-tuesday-health-tech-assignment/blob/main/hospice_quality_metrics/models/analytics/analytics.yml#L211)
 
+
+Reccomended read: [Analysis Journal](https://docs.google.com/document/d/1SECftKCQdrU6C_VH_hN-ZWl7HQkYOIakkvui1QyOsz0/edit#heading=h.xwpvjeusiqjw) - to learn more about the project progression 
 
 ## Prerequisites
 - ```Python 3.9``` or higher
