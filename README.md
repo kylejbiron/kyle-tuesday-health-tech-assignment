@@ -7,7 +7,7 @@ LinkedIn: [linkedin.com/in/kylebiron](https://www.linkedin.com/in/kylebiron/)
 * [Current Measures | CMS](https://www.cms.gov/medicare/quality/hospice/current-measures)
 * [HIS Manual](https://www.cms.gov/files/document/hismanualv302apr152024.pdf)
 * [Hospice Care Index Technical Report](https://www.cms.gov/files/document/hospice-care-index-hci-technical-reportjuly-2022.pdf)
-* Optional read: [Analysis Journal](https://docs.google.com/document/d/1SECftKCQdrU6C_VH_hN-ZWl7HQkYOIakkvui1QyOsz0/edit#heading=h.xwpvjeusiqjw)
+* Optional read: [Analysis Journal](https://docs.google.com/document/d/1SECftKCQdrU6C_VH_hN-ZWl7HQkYOIakkvui1QyOsz0/edit#heading=h.xwpvjeusiqjw) - to view project progress 
 
 ## Prompt
 
@@ -21,11 +21,6 @@ This is the hospice quality metrics dataset that CMS publishes annually.  We’d
 > Response: see [analytics.yml](hospice_quality_metrics/models/analytics/analytics.yml)
 > - [fact_hospice_provider_flattened](https://github.com/kylejbiron/kyle-tuesday-health-tech-assignment/blob/main/hospice_quality_metrics/models/analytics/analytics.yml#L4)
 > - [dim_hospice_provider_geography](https://github.com/kylejbiron/kyle-tuesday-health-tech-assignment/blob/main/hospice_quality_metrics/models/analytics/analytics.yml#L211)
-
-## Join Condition
-
-The tables are joined on the `ccn` (CMS Certification Number) column, which is the primary key in both tables:
-
 
 
 ## Prerequisites
