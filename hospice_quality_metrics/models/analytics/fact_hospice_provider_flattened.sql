@@ -83,7 +83,19 @@ select
     provided_home_care_and_other,
     provided_home_care_only,
 
+    -- one-hot encoding for cms_region for downstream modeling
+    cast(ceil(cast(replace(h_012_07_observed, ',', '') as numeric) / 200) as int) as los_proxy,
+    if(cms_region = 1, 1, 0) as cms_region_1,
+    if(cms_region = 2, 1, 0) as cms_region_2,
+    if(cms_region = 3, 1, 0) as cms_region_3,
+    if(cms_region = 4, 1, 0) as cms_region_4,
+    if(cms_region = 5, 1, 0) as cms_region_5,
+    if(cms_region = 6, 1, 0) as cms_region_6,
+    if(cms_region = 7, 1, 0) as cms_region_7,
+    if(cms_region = 8, 1, 0) as cms_region_8,
+    if(cms_region = 9, 1, 0) as cms_region_9,
+
     -- round to the next highest integer to proxy length of stay
-    cast(ceil(cast(replace(h_012_07_observed, ',', '') as numeric) / 200) as int) as los_proxy
+    if(cms_region = 10, 1, 0) as cms_region_10
 
 from {{ ref('stg_hospice_provider_flattened') }}

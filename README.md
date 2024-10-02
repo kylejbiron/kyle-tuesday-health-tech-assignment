@@ -5,6 +5,7 @@ LinkedIn: [linkedin.com/in/kylebiron](https://www.linkedin.com/in/kylebiron/)
 
 ## Useful Links
 * [Current Measures | CMS](https://www.cms.gov/medicare/quality/hospice/current-measures)
+* [HIS Manual](https://www.cms.gov/files/document/hismanualv302apr152024.pdf)
 * [Hospice Care Index Technical Report](https://www.cms.gov/files/document/hospice-care-index-hci-technical-reportjuly-2022.pdf)
 * Optional read: [Analysis Journal](https://docs.google.com/document/d/1SECftKCQdrU6C_VH_hN-ZWl7HQkYOIakkvui1QyOsz0/edit#heading=h.xwpvjeusiqjw)
 
@@ -51,5 +52,12 @@ poetry shell
 ```
 poetry run pre-commit run --all-files 
 ```
+
+4. Retrieving and loading the raw CSV file
+
+> download ```Hospice_Provider_Aug2024.csv``` from https://data.cms.gov/provider-data/dataset/252m-zfp9#data-table  and place it in this directory within the project:
+
+```/kyle-tuesday-health-tech-assignment/hospice_quality_metrics/raw/```
+
 
 

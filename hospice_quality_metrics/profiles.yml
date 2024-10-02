@@ -2,6 +2,6 @@ hospice_quality_metrics:
   outputs:
     dev:
       type: duckdb
-      path: /Users/kyle/Documents/personal_projects/repos/kyle-tuesday-health-tech-assignment/hospice_quality_metrics/db/hospice_quality_metrics.db
+      path: ./db/hospice_quality_metrics.db
       extensions: []
   target: dev
