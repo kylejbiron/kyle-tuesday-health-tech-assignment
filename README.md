@@ -18,10 +18,6 @@ LinkedIn: [linkedin.com/in/kylebiron](https://www.linkedin.com/in/kylebiron/)
 curl -sSL https://install.python-poetry.org | python3 -
 ```
 
-
-
-
-
 ## Getting Started
 
 1. Clone the repository:

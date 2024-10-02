@@ -11,7 +11,163 @@ models:
       - name: cms_region
         tests:
           - not_null
-
+      - name: h_001_01_denominator
+        description: "Denominator for hospice quality measure H001"
+      - name: h_001_01_observed
+        description: "Observed value for hospice quality measure H001"
+      - name: h_002_01_denominator
+        description: "Denominator for hospice quality measure H002"
+      - name: h_002_01_observed
+        description: "Observed value for hospice quality measure H002"
+      - name: h_003_01_denominator
+        description: "Denominator for hospice quality measure H003"
+      - name: h_003_01_observed
+        description: "Observed value for hospice quality measure H003"
+      - name: h_004_01_denominator
+        description: "Denominator for hospice quality measure H004"
+      - name: h_004_01_observed
+        description: "Observed value for hospice quality measure H004"
+      - name: h_005_01_denominator
+        description: "Denominator for hospice quality measure H005"
+      - name: h_005_01_observed
+        description: "Observed value for hospice quality measure H005"
+      - name: h_006_01_denominator
+        description: "Denominator for hospice quality measure H006"
+      - name: h_006_01_observed
+        description: "Observed value for hospice quality measure H006"
+      - name: h_007_01_denominator
+        description: "Denominator for hospice quality measure H007"
+      - name: h_007_01_observed
+        description: "Observed value for hospice quality measure H007"
+      - name: h_008_01_denominator
+        description: "Denominator for hospice quality measure H008"
+      - name: h_008_01_observed
+        description: "Observed value for hospice quality measure H008, cast as decimal"
+      - name: h_011_01_denominator
+        description: "Denominator for hospice quality measure H011"
+      - name: h_011_01_observed
+        description: "Observed value for hospice quality measure H011"
+      - name: h_012_00_observed
+        description: "Observed value for hospice quality measure H012, cast as decimal"
+      - name: h_012_01_denominator
+        description: "Denominator for hospice quality measure H012-01"
+      - name: h_012_01_observed
+        description: "Observed value for hospice quality measure H012-01"
+      - name: h_012_01_percentile
+        description: "Percentile for hospice quality measure H012-01"
+      - name: h_012_02_denominator
+        description: "Denominator for hospice quality measure H012-02"
+      - name: h_012_02_observed
+        description: "Observed value for hospice quality measure H012-02"
+      - name: h_012_02_percentile
+        description: "Percentile for hospice quality measure H012-02"
+      - name: h_012_03_denominator
+        description: "Denominator for hospice quality measure H012-03"
+      - name: h_012_03_observed
+        description: "Observed value for hospice quality measure H012-03"
+      - name: h_012_03_percentile
+        description: "Percentile for hospice quality measure H012-03"
+      - name: h_012_04_denominator
+        description: "Denominator for hospice quality measure H012-04"
+      - name: h_012_04_observed
+        description: "Observed value for hospice quality measure H012-04"
+      - name: h_012_04_percentile
+        description: "Percentile for hospice quality measure H012-04"
+      - name: h_012_05_denominator
+        description: "Denominator for hospice quality measure H012-05"
+      - name: h_012_05_observed
+        description: "Observed value for hospice quality measure H012-05"
+      - name: h_012_05_percentile
+        description: "Percentile for hospice quality measure H012-05"
+      - name: h_012_06_denominator
+        description: "Denominator for hospice quality measure H012-06"
+      - name: h_012_06_observed
+        description: "Observed value for hospice quality measure H012-06"
+      - name: h_012_06_percentile
+        description: "Percentile for hospice quality measure H012-06"
+      - name: h_012_07_denominator
+        description: "Denominator for hospice quality measure H012-07, cast as decimal"
+      - name: h_012_07_observed
+        description: "Observed value for hospice quality measure H012-07, cast as decimal"
+      - name: h_012_07_percentile
+        description: "Percentile for hospice quality measure H012-07"
+      - name: h_012_08_denominator
+        description: "Denominator for hospice quality measure H012-08"
+      - name: h_012_08_observed
+        description: "Observed value for hospice quality measure H012-08"
+      - name: h_012_08_percentile
+        description: "Percentile for hospice quality measure H012-08"
+      - name: h_012_09_denominator
+        description: "Denominator for hospice quality measure H012-09"
+      - name: h_012_09_observed
+        description: "Observed value for hospice quality measure H012-09"
+      - name: h_012_09_percentile
+        description: "Percentile for hospice quality measure H012-09"
+      - name: h_012_10_denominator
+        description: "Denominator for hospice quality measure H012-10"
+      - name: h_012_10_observed
+        description: "Observed value for hospice quality measure H012-10"
+      - name: h_012_10_percentile
+        description: "Percentile for hospice quality measure H012-10"
+      - name: average_daily_census
+        description: "Average daily census for the hospice provider"
+      - name: bene_dual_pct
+        description: "Percentage of beneficiaries with dual eligibility"
+      - name: bene_ma_pct
+        description: "Percentage of beneficiaries enrolled in Medicare Advantage"
+      - name: care_provided_assisted_living
+        description: "Care provided in assisted living facilities"
+      - name: care_provided_home
+        description: "Care provided in home settings"
+      - name: care_provided_inpatient_hospice
+        description: "Care provided in inpatient hospice facilities"
+      - name: care_provided_inpatient_hospital
+        description: "Care provided in inpatient hospitals"
+      - name: care_provided_nursing_facility
+        description: "Care provided in nursing facilities"
+      - name: care_provided_skilled_nursing
+        description: "Care provided in skilled nursing facilities"
+      - name: care_provided_other_locations
+        description: "Care provided in other locations"
+      - name: pct_pts_w_cancer
+        description: "Percentage of patients with cancer, cast as int"
+      - name: pct_pts_w_circ_heart_disease
+        description: "Percentage of patients with circulatory heart disease, cast as int"
+      - name: pct_pts_w_dementia
+        description: "Percentage of patients with dementia, cast as int"
+      - name: pct_pts_w_resp_disease
+        description: "Percentage of patients with respiratory disease, cast as int"
+      - name: pct_pts_w_stroke
+        description: "Percentage of patients with stroke, cast as int"
+      - name: pct_pts_w_other_conditions
+        description: "Percentage of patients with other conditions, cast as int"
+      - name: provided_home_care_and_other
+        description: "Whether the hospice provided home care and other services"
+      - name: provided_home_care_only
+        description: "Whether the hospice provided only home care"
+      - name: los_proxy
+        description: "Proxy for length of stay, calculated as ceil(observed value / 200)"
+      - name: cms_region_1
+        description: "One-hot encoding for CMS Region 1"
+      - name: cms_region_2
+        description: "One-hot encoding for CMS Region 2"
+      - name: cms_region_3
+        description: "One-hot encoding for CMS Region 3"
+      - name: cms_region_4
+        description: "One-hot encoding for CMS Region 4"
+      - name: cms_region_5
+        description: "One-hot encoding for CMS Region 5"
+      - name: cms_region_6
+        description: "One-hot encoding for CMS Region 6"
+      - name: cms_region_7
+        description: "One-hot encoding for CMS Region 7"
+      - name: cms_region_8
+        description: "One-hot encoding for CMS Region 8"
+      - name: cms_region_9
+        description: "One-hot encoding for CMS Region 9"
+      - name: cms_region_10
+        description: "One-hot encoding for CMS Region 10"
+      
   - name: fact_hospice_provider_missing_metrics_by_region
     description: "Summary of missing metrics by region"
     columns:
@@ -19,4 +175,66 @@ models:
         tests:
           - not_null
           - unique
+      - name: total_missing_his
+        description: "Total records missing HIS metric"
+        tests:
+          - not_null
+      - name: total_is_missing_hci
+        description: "Total records missing HIC metric"
+        tests:
+          - not_null
+      - name: total_missing_his_or_hci
+        description: "Total records missing either HIS or HIC metric"
+        tests:
+          - not_null
+      - name: total_is_missing_both_hsi_hci
+        description: "Total records missing both HIS and HIC metric"
+        tests:
+          - not_null
+      - name: total_denominator
+        description: "Total denominator"
+        tests:
+          - not_null
+      - name: percent_missing_his
+        description: "Percent missing HIS metric"
+        tests:
+          - not_null
+      - name: percent_missing_his_or_hci
+        description: "Percent missing either HIS or HIC metric"
+        tests:
+          - not_null
+      - name: percent_missing_both_hsi_hci
+        description: "Percent missing both HIS and HIC metric"
+        tests:
+          - not_null
 
+  - name: dim_hospice_provider_geography
+    description: "A distinct list of hospice providers with geographic information, including address details, CMS region, and placeholders for latitude and longitude"
+    columns:
+      - name: ccn
+        description: "CMS Certification Number, unique identifier for each hospice"
+        tests:
+          - unique
+          - not_null
+      - name: cms_region
+        description: "The CMS region where the hospice operates"
+        tests:
+          - not_null
+      - name: address_line_1
+        description: "The first line of the address for the hospice provider"
+      - name: address_line_2
+        description: "The second line of the address for the hospice provider (if applicable)"
+      - name: city_town
+        description: "The city or town where the hospice provider is located"
+      - name: state
+        description: "The state where the hospice provider operates"
+        tests:
+          - not_null
+      - name: zip_code
+        description: "The zip code for the hospice provider's location"
+      - name: county_parish
+        description: "The county or parish where the hospice provider is located"
+      - name: latitude
+        description: "Placeholder for the latitude of the hospice provider's location (to be calculated based on address)"
+      - name: longitude
+        description: "Placeholder for the longitude of the hospice provider's location (to be calculated based on address)"
