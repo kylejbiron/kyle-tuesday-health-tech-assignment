@@ -18,7 +18,7 @@ This is the hospice quality metrics dataset that CMS publishes annually.  We’d
 2. This dataset provides some information on the condition mix at each hospice (cancer, heart disease, dementia, respiratory disease, stroke).  Based on the hospice-level patient mix, which conditions appear to have longer hospice lengths-of-stay?  Note: this dataset doesn’t have a LOS variable.  However, you can use an average per diem of $200 to convert per-beneficiary spending to a LOS (this is the approximate per-diem for RHC (routine home care) which constitutes the majority of hospice claims).  Based on this finding, do you have any concerns about the construction of the HCI quality measure?
 > Response: see [hospice_analysis.ipynb](hospice_quality_metrics/notebooks/hospice_analysis.ipynb)
 3. Now imagine you’re working with someone in clinical operations.  They want to be able to zoom in on a geography and see the top hospices (based on quality metrics) operating in that geography.  Sketch out a schema (e.g. dimension and fact tables) that you might build in dbt to deliver that information via a BI tool.
-> Response: see [analytics.yml](hospice_quality_metrics/models/analytics/analytics.yaml)
+> Response: see [analytics.yml](hospice_quality_metrics/models/analytics/analytics.yml)
 
 
 ## Prerequisites
