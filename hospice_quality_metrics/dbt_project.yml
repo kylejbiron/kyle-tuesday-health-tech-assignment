@@ -9,7 +9,7 @@ version: '1.0.0'
 profile: 'hospice_quality_metrics'
 
 vars:
-  raw_dir: "/Users/kyle/Documents/personal_projects/repos/kyle-tuesday-health-tech-assignment/hospice_quality_metrics/raw"
+  raw_dir: "./raw"
   
 
 # These configurations specify where dbt should look for different types of files.
