@@ -1,0 +1,29 @@
+[tool.poetry]
+name = "kyle-tuesday-health-tech-assignment"
+version = "0.1.0"
+description = "A dbt and DuckDB-based data engineering project to process and model healthcare quality metrics data, facilitating the analysis of hospice performance metrics."
+authors = ["Kyle Biron <kylejbiron@gmail.com>"]
+license = "MIT License"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+dbt = "^1.0.0.38.15"
+dbt-duckdb = "^1.8.4"
+dbt-core = "^1.8.7"
+jupyter = "^1.1.1"
+pre-commit = "^3.8.0"
+numpy = "^2.1.1"
+pandas = "^2.2.3"
+pprint36 = "^3.9.16.0"
+seaborn = "^0.13.2"
+matplotlib = "^3.9.2"
+scipy = "^1.14.1"
+statsmodels = "^0.14.3"
+scikit-learn = "^1.5.2"
+ipykernel = "^6.29.5"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
