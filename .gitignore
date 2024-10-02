@@ -1,4 +1,5 @@
 venv/
+logs/
 hospice_quality_metrics/venv/
 hospice_quality_metrics/raw/
 hospice_quality_metrics/db/
