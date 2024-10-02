@@ -19,6 +19,13 @@ This is the hospice quality metrics dataset that CMS publishes annually.  We’d
 > Response: see [hospice_analysis.ipynb](hospice_quality_metrics/notebooks/hospice_analysis.ipynb)
 3. Now imagine you’re working with someone in clinical operations.  They want to be able to zoom in on a geography and see the top hospices (based on quality metrics) operating in that geography.  Sketch out a schema (e.g. dimension and fact tables) that you might build in dbt to deliver that information via a BI tool.
 > Response: see [analytics.yml](hospice_quality_metrics/models/analytics/analytics.yml)
+> - [fact_hospice_provider_flattened](https://github.com/kylejbiron/kyle-tuesday-health-tech-assignment/blob/main/hospice_quality_metrics/models/analytics/analytics.yml#L4)
+> - [dim_hospice_provider_geography](https://github.com/kylejbiron/kyle-tuesday-health-tech-assignment/blob/main/hospice_quality_metrics/models/analytics/analytics.yml#L211)
+
+## Join Condition
+
+The tables are joined on the `ccn` (CMS Certification Number) column, which is the primary key in both tables:
+
 
 
 ## Prerequisites
