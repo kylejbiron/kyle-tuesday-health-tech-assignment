@@ -2,17 +2,16 @@
 # Name your project! Project names should contain only lowercase characters
 # and underscores. A good package name should reflect your organization's
 # name or the intended use of these models
-name: 'cms_synpufs'
+name: 'cms_cclf'
 version: '1.0.0'
 
 # This setting configures which "profile" dbt uses for this project.
-profile: 'cms_synpufs'
+profile: 'cms_cclf_profile'
 
 vars:
-  claims_enabled: false
-  cms_hcc_payment_year: 2019
-  quality_measures_period_end: "2018-12-31"
   raw_dir: "./raw"
+  input_database: cms_cclf
+  input_schema: cclf 
 
 # These configurations specify where dbt should look for different types of files.
 # The `model-paths` config, for example, states that models in this project can be
@@ -36,14 +35,5 @@ clean-targets:         # directories to be removed by `dbt clean`
 # directory as views. These settings can be overridden in the individual model
 # files using the `{{ config(...) }}` macro.
 models:
-  cms_synpufs:
-    staging:
-      +schema: cms_synpufs
-      +materialized: table
-  the_tuva_project:
-    +enabled: false
-
-seeds:
-  the_tuva_project:
-    +enabled: false
-
+  cms_cclf:
+    +materialized: table

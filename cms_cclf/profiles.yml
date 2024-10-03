@@ -1,0 +1,7 @@
+cms_cclf_profile:
+  outputs:
+    dev:
+      type: duckdb
+      path: ./db/cms_cclf.db
+      schema: 'cclf'
+  target: dev

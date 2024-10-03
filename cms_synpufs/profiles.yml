@@ -1,9 +1,0 @@
-cms_synpufs:
-  outputs:
-    dev:
-      type: duckdb
-      path: ./db/cms_synpufs.db
-      extensions: []
-  target: dev
-
-  

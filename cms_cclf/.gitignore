@@ -1,5 +1,6 @@
+
 target/
 dbt_packages/
 logs/
-db/
 raw/
+db/
