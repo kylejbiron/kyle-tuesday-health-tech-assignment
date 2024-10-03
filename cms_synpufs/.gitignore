@@ -1,5 +1,5 @@
 target/
 dbt_packages/
 logs/
-/Users/kyle/Documents/personal_projects/repos/kyle-dbt-duckdb/cms_synpufs/db/*
-/Users/kyle/Documents/personal_projects/repos/kyle-dbt-duckdb/cms_synpufs/raw/*
+db/
+raw/
