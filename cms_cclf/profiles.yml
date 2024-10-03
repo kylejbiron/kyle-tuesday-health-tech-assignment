@@ -1,0 +1,7 @@
+cms_cclf:
+  outputs:
+    dev:
+      type: duckdb
+      path: ./db/cms_cclf.db
+      schema: 'raw'  # This is where the tables will be created
+  target: dev

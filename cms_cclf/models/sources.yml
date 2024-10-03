@@ -1,0 +1,23 @@
+sources:
+  - name: cms_cclf_data_raw
+    tables:
+      - name: beneficiary_demographics
+        description: "CCLF8 Beneficiary Demographics File"
+
+      - name: part_a_claims_header
+        description: "CCLF1 Part A Claims Header File"
+
+      - name: part_a_claims_revenue_center_detail
+        description: "CCLF2 Part A Claims Revenue Center Detail File"
+
+      - name: part_a_diagnosis_code
+        description: "CCLF4 Part A Diagnosis Code File"
+
+      - name: part_a_procedure_code
+        description: "CCLF3 Part A Procedure Code File"
+
+      - name: part_b_dme
+        description: "CCLF6 Part B DME File"
+
+      - name: part_b_physicians
+        description: "CCLF5 Part B Physicians File"
