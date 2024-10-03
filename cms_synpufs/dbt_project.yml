@@ -12,7 +12,7 @@ vars:
   claims_enabled: false
   cms_hcc_payment_year: 2019
   quality_measures_period_end: "2018-12-31"
-  raw_dir: "/Users/kyle/Documents/personal_projects/repos/kyle-dbt-duckdb/cms_synpufs/raw"
+  raw_dir: "./raw"
 
 # These configurations specify where dbt should look for different types of files.
 # The `model-paths` config, for example, states that models in this project can be
