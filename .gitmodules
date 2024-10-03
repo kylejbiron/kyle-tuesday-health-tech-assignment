@@ -1,3 +1,0 @@
-[submodule "medicare_cclf_connector"]
-	path = medicare_cclf_connector
-	url = https://github.com/tuva-health/medicare_cclf_connector.git
