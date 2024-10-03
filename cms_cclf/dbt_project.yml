@@ -6,10 +6,12 @@ name: 'cms_cclf'
 version: '1.0.0'
 
 # This setting configures which "profile" dbt uses for this project.
-profile: 'cms_cclf'
+profile: 'cms_cclf_profile'
 
 vars:
   raw_dir: "./raw"
+  input_database: cms_cclf
+  input_schema: cclf 
 
 # These configurations specify where dbt should look for different types of files.
 # The `model-paths` config, for example, states that models in this project can be
@@ -34,6 +36,4 @@ clean-targets:         # directories to be removed by `dbt clean`
 # files using the `{{ config(...) }}` macro.
 models:
   cms_cclf:
-    # Config indicated by + and applies to all files under models/example/
-    staging:
-      +materialized: table
+    +materialized: table
