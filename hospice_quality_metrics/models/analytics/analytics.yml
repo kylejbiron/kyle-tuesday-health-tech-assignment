@@ -209,7 +209,7 @@ models:
           - not_null
 
   - name: dim_hospice_provider_geography
-    description: "A distinct list of hospice providers with geograpHCI information, including address details, CMS region, and placeholders for latitude and longitude"
+    description: "A distinct list of hospice providers with geographic information, including address details, CMS region, and placeholders for latitude and longitude"
     columns:
       - name: ccn
         description: "CMS Certification Number, unique identifier for each hospice (join key to link with the 'fact_hospice_provider_flattened' table)"
