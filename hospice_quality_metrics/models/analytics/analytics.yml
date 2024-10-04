@@ -180,15 +180,15 @@ models:
         tests:
           - not_null
       - name: total_is_missing_hci
-        description: "Total records missing HIC metric"
+        description: "Total records missing HCI metric"
         tests:
           - not_null
       - name: total_missing_his_or_hci
-        description: "Total records missing either HIS or HIC metric"
+        description: "Total records missing either HIS or HCI metric"
         tests:
           - not_null
       - name: total_is_missing_both_hsi_hci
-        description: "Total records missing both HIS and HIC metric"
+        description: "Total records missing both HIS and HCI metric"
         tests:
           - not_null
       - name: total_denominator
@@ -200,16 +200,16 @@ models:
         tests:
           - not_null
       - name: percent_missing_his_or_hci
-        description: "Percent missing either HIS or HIC metric"
+        description: "Percent missing either HIS or HCI metric"
         tests:
           - not_null
       - name: percent_missing_both_hsi_hci
-        description: "Percent missing both HIS and HIC metric"
+        description: "Percent missing both HIS and HCI metric"
         tests:
           - not_null
 
   - name: dim_hospice_provider_geography
-    description: "A distinct list of hospice providers with geographic information, including address details, CMS region, and placeholders for latitude and longitude"
+    description: "A distinct list of hospice providers with geograpHCI information, including address details, CMS region, and placeholders for latitude and longitude"
     columns:
       - name: ccn
         description: "CMS Certification Number, unique identifier for each hospice (join key to link with the 'fact_hospice_provider_flattened' table)"
